@@ -1,67 +1,51 @@
+/* eslint-disable react/no-unescaped-entities */
 import Head from "next/head";
-import Image from "next/image";
-import { Card } from "../components/card";
-import VercelSvg from "../../public/vercel.svg";
+import ProfilePic from "../../public/profile-pic.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot, faShare } from "@fortawesome/free-solid-svg-icons";
+import { Image } from "../components/Image";
 
 const Home: React.FunctionComponent = () => {
   return (
-    <div className="min-h-screen px-2 flex flex-col justify-center items-center">
+    <>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Home | Diego Albitres</title>
       </Head>
-
-      <main className="py-20 flex flex-1 flex-col justify-center items-center">
-        <h1 className="text-7xl text-center">
-          Welcome to{" "}
-          <a href="https://nextjs.org" className="text-indigo-500 hover:underline focus:underline">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="text-2xl leading-6 mt-4">
-          Get started by editing <code className="bg-gray-100 rounded p-2 text-lg font-mono">pages/index.js</code>
-        </p>
-
-        <div className="grid max-w-4xl mt-12">
-          <Card
-            title="Documentation &rarr;"
-            caption="Find in-depth information about Next.js features and API."
-            href="https://nextjs.org/docs"
-          />
-
-          <Card
-            title="Learn &rarr;"
-            caption="Learn about Next.js in an interactive course with quizzes!"
-            href="https://nextjs.org/learn"
-          />
-
-          <Card
-            title="Examples &rarr;"
-            caption="Discover and deploy boilerplate example Next.js projects."
-            href="https://github.com/vercel/next.js/tree/master/examples"
-          />
-
-          <Card
-            title="Deploy &rarr;"
-            caption="Instantly deploy your Next.js site to a public URL with Vercel."
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          />
+      <main className="flex items-center h-full space-x-4">
+        <div className="flex flex-col space-y-8">
+          <span className="text-xl font-medium tracking-wide text-gray-200">Hey there, my name is</span>
+          <h1 className="text-7xl font-bold tracking-wide text-gray-100">Diego Albitres.</h1>
+          <p className="text-lg text-gray-400">
+            I'm a software engineer specializing in building (and occasionally designing) web applications and
+            experiences. I'm currently studying at{" "}
+            <a href="https://upc.edu.pe/" className="pretty-link text-gray-200">
+              Universidad Peruana de Ciencias Aplicadas
+            </a>
+            .
+          </p>
+          <div className="flex"></div>
+        </div>
+        <div className="flex justify-end items-center">
+          <div className="flex flex-col space-y-2 relative">
+            <div className="absolute -top-6 -left-16 -rotate-6">
+              <div className="flex">
+                <span className="mr-1">That's me</span>
+                <FontAwesomeIcon fixedWidth className="w-5 h-5 mt-2 rotate-90" icon={faShare} />
+              </div>
+            </div>
+            <div className="h-64 w-64 rounded-xl overflow-hidden">
+              <Image src={ProfilePic} alt="Diego's profile picture in Chicago" />
+            </div>
+            <div className="flex justify-end items-center space-x-1 text-sm text-gray-400">
+              <FontAwesomeIcon fixedWidth className="w-5 h-5" icon={faLocationDot} />
+              <a href="https://goo.gl/maps/83AKs6rvpjdLm6sj8" className="pretty-link">
+                DuSable Bridge, Chicago
+              </a>
+            </div>
+          </div>
         </div>
       </main>
-
-      <footer className="w-full h-24 border-t border-solid border-gray-200 flex justify-center items-center">
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          className="flex justify-center items-center"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="mr-2">Powered by</span>
-          <Image src={VercelSvg} alt="Vercel Logo" layout="fixed" width={71} height={16} unoptimized={true} />
-        </a>
-      </footer>
-    </div>
+    </>
   );
 };
 

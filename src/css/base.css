@@ -3,14 +3,20 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    @apply font-inter antialiased;
+  html,
+  body {
+    @apply font-inter antialiased h-full text-gray-200;
   }
 
   @supports (font-variation-settings: normal) {
     html {
       @apply font-inter-var;
     }
+  }
+
+  /* stylelint-disable-next-line selector-id-pattern */
+  #__next {
+    @apply h-full;
   }
 
   a,
@@ -21,5 +27,11 @@
   a[disabled],
   button[disabled] {
     @apply cursor-default pointer-events-none;
+  }
+}
+
+@layer components {
+  .pretty-link {
+    @apply underline rounded transition-colors hover:text-white hover:bg-gray-800;
   }
 }
