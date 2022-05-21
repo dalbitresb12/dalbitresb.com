@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import Head from "next/head";
 import ProfilePic from "../../public/profile-pic.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot, faShare } from "@fortawesome/free-solid-svg-icons";
+import { LocationMarkerIcon } from "@heroicons/react/solid";
+import { CurvedArrowSvg } from "../icons/CurvedArrow";
 import { Image } from "../components/Image";
 
 const Home: React.FunctionComponent = () => {
@@ -29,15 +29,15 @@ const Home: React.FunctionComponent = () => {
           <div className="flex flex-col space-y-2 relative">
             <div className="absolute -top-6 -left-16 -rotate-6">
               <div className="flex">
-                <span className="mr-1">That's me</span>
-                <FontAwesomeIcon fixedWidth className="w-5 h-5 mt-2 rotate-90" icon={faShare} />
+                <span className="mr-2">That's me!</span>
+                <CurvedArrowSvg className="h-12 w-12 -mt-2" />
               </div>
             </div>
             <div className="h-64 w-64 rounded-xl overflow-hidden">
               <Image src={ProfilePic} alt="Diego's profile picture in Chicago" />
             </div>
             <div className="flex justify-end items-center space-x-1 text-sm text-gray-400">
-              <FontAwesomeIcon fixedWidth className="w-5 h-5" icon={faLocationDot} />
+              <LocationMarkerIcon className="w-6 h-6" />
               <a href="https://goo.gl/maps/83AKs6rvpjdLm6sj8" className="pretty-link">
                 DuSable Bridge, Chicago
               </a>
