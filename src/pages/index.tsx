@@ -30,7 +30,7 @@ const Home: React.FunctionComponent = () => {
             <div className="absolute -top-6 -left-16 -rotate-6">
               <div className="flex">
                 <span className="mr-2">That's me!</span>
-                <CurvedArrowSvg className="h-12 w-12 -mt-2" />
+                <CurvedArrowSvg className="h-8 w-8" />
               </div>
             </div>
             <div className="h-64 w-64 rounded-xl overflow-hidden">
