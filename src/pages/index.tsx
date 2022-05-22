@@ -2,7 +2,7 @@
 import Head from "next/head";
 import ProfilePic from "../../public/profile-pic.jpg";
 import { LocationMarkerIcon } from "@heroicons/react/solid";
-import { CurvedArrowSvg } from "../icons/CurvedArrow";
+import CurvedArrowSvg from "../icons/CurvedArrow.svg";
 import { Image } from "../components/Image";
 
 const Home: React.FunctionComponent = () => {
