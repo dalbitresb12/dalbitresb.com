@@ -23,7 +23,7 @@ const Home: React.FunctionComponent = () => {
             </a>
             .
           </p>
-          <div className="flex"></div>
+          <div className="w-56 h-56 pattern-dots pattern-blue-500 pattern-bg-transparent pattern-size-6 pattern-opacity-20"></div>
         </div>
         <div className="flex justify-end items-center">
           <div className="flex flex-col space-y-2 relative">
