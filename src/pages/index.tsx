@@ -9,7 +9,7 @@ const Home: React.FunctionComponent = () => {
   return (
     <>
       <Head>
-        <title>Home | Diego Albitres</title>
+        <title>Home | Bestiaaal </title>
       </Head>
       <main className="flex items-center h-full space-x-4">
         <div className="flex flex-col space-y-8">
